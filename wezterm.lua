@@ -15,6 +15,7 @@ end
 config.cursor_thickness = 8
 config.use_fancy_tab_bar = false
 config.cursor_blink_rate = 0
+config.font_size = 10
 -- For example, changing the color scheme:
 config.color_scheme = 'Sandcastle (base16)'
 -- and finally, return the configuration to wezterm
@@ -39,6 +40,6 @@ config.keys = {
   { key = 'UpArrow', mods = 'SHIFT', action = wezterm.action.ScrollByLine(-1) },
   { key = 'DownArrow', mods = 'SHIFT', action = wezterm.action.ScrollByLine(1) },
 }
--- Spawn a fish shell in login mode
+-- Spawn a nushell shell in login mode
 config.default_prog = { '/usr/local/bin/nu' }
 return config
