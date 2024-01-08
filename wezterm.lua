@@ -27,6 +27,11 @@ config.keys = {
     action = wezterm.action.SplitVertical,
   },
   {
+    key = 'd',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitHorizontal,
+  },
+  {
     key = 'w',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.CloseCurrentPane { confirm = false },
