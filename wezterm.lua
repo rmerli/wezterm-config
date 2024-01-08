@@ -15,10 +15,12 @@ end
 config.cursor_thickness = 8
 config.use_fancy_tab_bar = false
 config.cursor_blink_rate = 0
-config.font_size = 10
+config.font_size = 11
 -- For example, changing the color scheme:
 config.color_scheme = 'Sandcastle (base16)'
+config.use_ime = false
 -- and finally, return the configuration to wezterm
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.keys = {
   -- Turn off the default CMD-m Hide action, allowing CMD-m to
   -- be potentially recognized and handled by the tab
