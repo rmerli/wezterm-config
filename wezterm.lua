@@ -26,23 +26,62 @@ config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to
 	-- be potentially recognized and handled by the tab
 	{
-		key = "d",
-		mods = "CTRL",
+		key = "DownArrow",
+		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitVertical,
 	},
 	{
-		key = "d",
+		key = "RightArrow",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitHorizontal,
 	},
 	{
-		key = "w",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.CloseCurrentPane({ confirm = false }),
+		key = "q",
+		mods = "CTRL",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 	{ key = "UpArrow", mods = "SHIFT", action = wezterm.action.ScrollByLine(-1) },
 	{ key = "DownArrow", mods = "SHIFT", action = wezterm.action.ScrollByLine(1) },
+	{
+		key = "h",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "l",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "LeftArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "RightArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "UpArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "j",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	{
+		key = "DownArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
 }
 -- Spawn a nushell shell in login mode
 config.default_prog = { "/usr/local/bin/nu" }
+
+config.hide_tab_bar_if_only_one_tab = true
+config.window_decorations = "RESIZE"
+
 return config
